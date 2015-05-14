@@ -1,4 +1,3 @@
-//this is a program related to 2-d array
 #include <stdio.h>
 #include <string.h>
 #define FOUND 1

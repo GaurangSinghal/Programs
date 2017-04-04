@@ -2,7 +2,7 @@ package pkg2.pkg5;
 
 public class Main 
 {
-    static int oh=0;
+    static int oh=0; // to store the carry
     static Node hs=null;
     static LinkedList lst3=new LinkedList();
     public static void main(String[] args)
@@ -17,8 +17,8 @@ public class Main
         //N2=lst2.insertNode(8);
         display(N1);
         display(N2);       
-        //hs=add(N1,N2);
-        alternate(N1,N2);
+        //hs=add(N1,N2); // if list stores the digits in reverse order
+        alternate(N1,N2); // if list stores the digits in original order
         display(hs);
     }
     
@@ -88,12 +88,11 @@ public class Main
         if(N1!=null && N2!=null)
         {   int sum=oh+N1.key+N2.key;
             oh=(sum>=10)?1:0;
-            hs=lst3.insertNode(sum%10);
-            System.out.println(N1.key);
+            hs=lst3.insertNode(sum%10);           
         }        
     }
     
-    public static void pad(Node N,int l)
+    public static void pad(Node N,int l) // to add zeroes to the smaller number
     {   Node temp=null;        
         while(l--!=0)
         {   temp.key=0;

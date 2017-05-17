@@ -17,7 +17,7 @@ public class RadixSort
         int len=a.length;
         int[] out=new int[len];
         for(exp=1;max/exp>0;exp*=10)
-        {   out=new int[len];         ///    on removing this why error ?????   Also if a variable is defined in a loop is its scope limited to the loop ?
+        {   out=new int[len];         
             int[] count=new int[10];            
             for(i=0;i<len;i++)
                ++count[(a[i]/exp)%10];
